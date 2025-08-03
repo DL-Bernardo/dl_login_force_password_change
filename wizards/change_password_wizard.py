@@ -10,6 +10,7 @@ class ChangePasswordWizard(models.TransientModel):
     _name = "change.password.wizard"
     _description = "Change Password Wizard"
 
+    user_ids = fields.Many2many("res.users", string="Users")
     password_new = fields.Char(string="New Password", required=True)
     password_confirm = fields.Char(string="Confirm Password", required=True)
 
