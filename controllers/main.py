@@ -12,7 +12,7 @@ class Home(WebHome):
     def web_login(self, redirect=None, **kw):
         response = super().web_login(redirect=redirect, **kw)
         if request.session.uid and request.env.user.must_change_password:
-            return http.redirect_with_hash("/dl_force_password_change/change_password")
+            return http.redirect("/dl_force_password_change/change_password")
         return response
 
     @http.route("/dl_force_password_change/change_password", type="http", auth="user")
