@@ -8,7 +8,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["base"],
+    "depends": ["base", "auth_password_policy"],
     "data": [
         "security/ir.model.access.csv",
         "views/res_users_view.xml",
