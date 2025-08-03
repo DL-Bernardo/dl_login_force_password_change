@@ -7,7 +7,7 @@ from odoo.exceptions import UserError
 
 
 class ChangePasswordWizard(models.TransientModel):
-    _name = "change.password.wizard"
+    _name = "dl.change.password.wizard"
     _description = "Change Password Wizard"
 
     user_ids = fields.Many2many("res.users", string="Users")

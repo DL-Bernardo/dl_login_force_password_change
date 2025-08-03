@@ -20,7 +20,7 @@ class Home(WebHome):
         action = (
             request.env["ir.actions.act_window"]
             .sudo()
-            .search([("res_model", "=", "change.password.wizard")], limit=1)
+            .search([("res_model", "=", "dl.change.password.wizard")], limit=1)
         )
         if not action:
             return request.redirect("/web")
