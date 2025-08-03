@@ -14,7 +14,7 @@
                         string="Force Password Change on Next Login"
                         type="object"
                         class="oe_link"
-                        attrs="{'invisible': [('must_change_password', '=', True)]}"
+                        invisible="must_change_password"
                     />
                 </div>
             </xpath>
