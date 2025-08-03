@@ -21,6 +21,7 @@ class ChangePasswordWizard(models.TransientModel):
         self.env.user.write(
             {"password": self.password_new, "must_change_password": False}
         )
+        self.env.cr.commit()
         return {
             "type": "ir.actions.client",
             "tag": "reload",
