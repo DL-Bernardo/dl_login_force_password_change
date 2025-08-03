@@ -38,9 +38,9 @@ class ResUsers(models.Model):
                 )
 
     def write(self, vals):
-        if "password" in vals:
-            for user in self:
-                self._check_password_policy(vals["password"])
+        # if "password" in vals:
+        #     for user in self:
+        #         self._check_password_policy(vals["password"])
         return super().write(vals)
 
     def action_reset_password(self):
