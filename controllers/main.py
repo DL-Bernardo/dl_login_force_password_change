@@ -4,10 +4,11 @@
 
 from odoo import http
 from odoo.http import request
+from odoo.addons.web.controllers.home import Home as WebHome
 
 
-class Home(http.Controller):
-    @http.route("/web/login", type="http", auth="none")
+class Home(WebHome):
+    @http.route("/web/login", type="http", auth="public")
     def web_login(self, redirect=None, **kw):
         response = super().web_login(redirect=redirect, **kw)
         if request.session.uid and request.env.user.must_change_password:
