@@ -4,7 +4,6 @@
 
 from odoo import _, api, fields, models
 from odoo.exceptions import UserError
-from odoo.http import request
 
 
 class ChangePasswordWizard(models.TransientModel):
@@ -19,13 +18,11 @@ class ChangePasswordWizard(models.TransientModel):
         self.ensure_one()
         if self.password_new != self.password_confirm:
             raise UserError(_("New passwords do not match."))
-        user = self.env.user
-        user.write(
+        self.env.user.write(
             {"password": self.password_new, "must_change_password": False}
         )
-        # Update the session context to reflect the change
-        request.session.context = user.context_get()
         return {
-            "type": "ir.actions.client",
-            "tag": "reload",
+            "type": "ir.actions.act_url",
+            "url": "/web",
+            "target": "self",
         }
