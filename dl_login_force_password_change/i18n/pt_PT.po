@@ -1,0 +1,123 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* dl_login_force_password_change
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-09-06 18:00+0000\n"
+"PO-Revision-Date: 2026-09-06 18:00+0000\n"
+"Last-Translator: DIGITALUB ANGOLA <geral@digitalub.ao>\n"
+"Language-Team: Portuguese <geral@digitalub.ao>\n"
+"Language: pt_PT\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: dl_login_force_password_change
+#: model:ir.model,name:dl_login_force_password_change.model_res_users
+msgid "User"
+msgstr "Utilizador"
+
+#. module: dl_login_force_password_change
+#: model:ir.model.fields,field_description:dl_login_force_password_change.field_res_users__must_change_password
+msgid "Must Change Password"
+msgstr "Deve alterar a palavra-passe"
+
+#. module: dl_login_force_password_change
+#: model:ir.model.fields,help:dl_login_force_password_change.field_res_users__must_change_password
+msgid "If checked, this user will be forced to change their password at next login."
+msgstr "Se marcado, este utilizador será forçado a alterar a palavra-passe no próximo login."
+
+#. module: dl_login_force_password_change
+#: model:ir.model.fields,field_description:dl_login_force_password_change.field_res_users__password_last_changed
+msgid "Password Last Changed"
+msgstr "Última alteração da palavra-passe"
+
+#. module: dl_login_force_password_change
+#: model:ir.model.fields,help:dl_login_force_password_change.field_res_users__password_last_changed
+msgid "Date and time when the user's password was last changed."
+msgstr "Data e hora em que a palavra-passe do utilizador foi alterada pela última vez."
+
+#. module: dl_login_force_password_change
+#: model:ir.model,name:dl_login_force_password_change.model_dl_change_password_wizard
+msgid "Force Change Password Wizard"
+msgstr "Assistente de Alteração Obrigatória de Palavra-passe"
+
+#. module: dl_login_force_password_change
+#: model:ir.actions.act_window,name:dl_login_force_password_change.action_change_password_wizard
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "Change Password"
+msgstr "Alterar Palavra-passe"
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "Your password must be changed before accessing the system."
+msgstr "A sua palavra-passe deve ser alterada antes de aceder ao sistema."
+
+#. module: dl_login_force_password_change
+#: model:ir.model.fields,field_description:dl_login_force_password_change.field_dl_change_password_wizard__password_new
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "New Password"
+msgstr "Nova Palavra-passe"
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "Enter new password"
+msgstr "Digite a nova palavra-passe"
+
+#. module: dl_login_force_password_change
+#: model:ir.model.fields,field_description:dl_login_force_password_change.field_dl_change_password_wizard__password_confirm
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "Confirm Password"
+msgstr "Confirmar Palavra-passe"
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "Repeat new password"
+msgstr "Repita a nova palavra-passe"
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "Cancel"
+msgstr "Cancelar"
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_users_form
+msgid "Password Security"
+msgstr "Segurança da Palavra-passe"
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_users_form
+msgid "Force Password Change on Next Login"
+msgstr "Forçar alteração no próximo login"
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_users_form
+msgid "Force Now"
+msgstr "Forçar Agora"
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_users_form
+msgid "Last changed:"
+msgstr "Última alteração:"
+
+#. module: dl_login_force_password_change
+#: code:addons/dl_login_force_password_change/wizards/change_password_wizard.py:0
+#, python-format
+msgid "New passwords do not match."
+msgstr "As novas palavras-passe não coincidem."
+
+#. module: dl_login_force_password_change
+#: code:addons/dl_login_force_password_change/wizards/change_password_wizard.py:0
+#, python-format
+msgid "The password must be at least 8 characters long."
+msgstr "A palavra-passe deve ter pelo menos 8 caracteres."
+
+#. module: dl_login_force_password_change
+#: code:addons/dl_login_force_password_change/models/ir_http.py:0
+#, python-format
+msgid "You must change your password to continue."
+msgstr "Deve alterar a sua palavra-passe para continuar."

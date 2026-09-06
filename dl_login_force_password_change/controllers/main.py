@@ -1,6 +1,8 @@
+# -*- coding: utf-8 -*-
 # Copyright 2016-2018 Tecnativa - Pedro M. Baeza
 # Copyright 2021 Tecnativa - Víctor Martínez
-# License AGPL-3.0 or later (https://www.gnu.org/licenses/agpl).
+# Copyright 2024-2026 DIGITALUB ANGOLA, LDA
+# License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
 from odoo import http
 from odoo.http import request
@@ -8,6 +10,8 @@ from odoo.addons.web.controllers.home import Home as WebHome
 
 
 class Home(WebHome):
+    """Override WebHome to intercept login if password change is required."""
+
     @http.route("/web/login", type="http", auth="public")
     def web_login(self, redirect=None, **kw):
         response = super().web_login(redirect=redirect, **kw)
@@ -17,6 +21,7 @@ class Home(WebHome):
 
     @http.route("/dl_force_password_change/change_password", type="http", auth="user")
     def change_password_redirect(self, **kw):
+        """Redirect the user directly to the password change wizard action."""
         action = (
             request.env["ir.actions.act_window"]
             .sudo()

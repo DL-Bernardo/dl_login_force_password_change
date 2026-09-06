@@ -1,7 +1,7 @@
 {
     "name": "DL Force Password Change on First Login",
-    "summary": "Força os utilizadores a alterar a password no primeiro login.",
-    "version": "17.0.1.0.1",
+    "summary": "Force users to change their password upon their first login or on next login.",
+    "version": "17.0.2.0.1",
     "category": "Authentication",
     "website": "https://www.digitalub.ao",
     "author": "DIGITALUB ANGOLA, LDA",
@@ -21,17 +21,24 @@
         "static/description/screenshot3.png",
     ],
     "description": """
-Módulo de segurança que obriga os utilizadores a alterar a senha
-na primeira vez que fazem login.
+DL Force Password Change on First Login
+=======================================
+Security module that enforces users to change their password when they log in for the first time or when flagged by an administrator.
 
-Como funciona:
-- Crie um novo utilizador (ou edite um existente);
-- Ative a opção **Force password change on Next Login**;
-- No próximo login, o utilizador será redirecionado para definir uma nova senha.
+Key Features:
+-------------
+* Enforce password change at first login or next login.
+* Works seamlessly for both newly created users and existing users.
+* Clean and responsive modal wizard for password update.
+* Tracks the last password change date.
+* 100% Free Community Edition by DIGITALUB ANGOLA.
 
-Benefícios:
-- Melhoria da segurança no ambiente Odoo;
-- Garante que novos utilizadores escolham uma senha pessoal;
-- Fácil de configurar e utilizar.
+How to use:
+-----------
+1. Navigate to Settings > Users & Companies > Users.
+2. Open a user profile.
+3. Check the "Force Password Change on Next Login" option (or click "Force Now").
+4. Upon the user's next login, they will be automatically prompted to set a new password.
     """,
 }
+

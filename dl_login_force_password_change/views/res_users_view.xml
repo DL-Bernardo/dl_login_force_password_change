@@ -6,16 +6,23 @@
         <field name="inherit_id" ref="base.view_users_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='login']" position="after">
-                <label for="must_change_password" string="Password"/>
+                <label for="must_change_password" string="Password Security"/>
                 <div>
-                    <field name="must_change_password" class="oe_inline"/>
-                    <button
-                        name="action_reset_password"
-                        string="Force Password Change on Next Login"
-                        type="object"
-                        class="oe_link"
-                        invisible="must_change_password"
-                    />
+                    <div class="d-flex align-items-center">
+                        <field name="must_change_password" class="oe_inline me-2"/>
+                        <label for="must_change_password" string="Force Password Change on Next Login" class="oe_inline me-3"/>
+                        <button
+                            name="action_reset_password"
+                            string="Force Now"
+                            type="object"
+                            class="oe_link"
+                            invisible="must_change_password"
+                        />
+                    </div>
+                    <div invisible="not password_last_changed" class="text-muted small mt-1">
+                        <span class="me-1">Last changed:</span>
+                        <field name="password_last_changed" readonly="1" class="oe_inline"/>
+                    </div>
                 </div>
             </xpath>
         </field>
