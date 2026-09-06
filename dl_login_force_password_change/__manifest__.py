@@ -1,7 +1,7 @@
 {
     "name": "DL Force Password Change on First Login",
     "summary": "Force users to change their password upon their first login or after 11 months.",
-    "version": "17.0.2.0.2",
+    "version": "17.0.2.0.3",
     "category": "Authentication",
     "website": "https://www.digitalub.ao",
     "author": "DIGITALUB ANGOLA, LDA",
@@ -22,6 +22,9 @@
         "static/description/screenshot1.png",
         "static/description/screenshot2.png",
         "static/description/screenshot3.png",
+        "static/description/screenshot4.png",
+        "static/description/screenshot5.png",
+        "static/description/screenshot6.png",
     ],
     "description": """
 DL Force Password Change on First Login
