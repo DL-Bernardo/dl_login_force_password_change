@@ -1,7 +1,7 @@
 {
     "name": "DL Force Password Change on First Login",
     "summary": "Força os utilizadores a alterar a password no primeiro login.",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Authentication",
     "website": "https://www.digitalub.ao",
     "author": "DIGITALUB ANGOLA, LDA",
@@ -9,8 +9,6 @@
     "application": False,
     "installable": True,
     "depends": ["base"],
-    "price": 16.0,
-    "currency": "USD",
     "data": [
         "security/ir.model.access.csv",
         "views/res_users_view.xml",
