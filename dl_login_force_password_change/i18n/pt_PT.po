@@ -54,8 +54,29 @@ msgstr "Alterar Palavra-passe"
 
 #. module: dl_login_force_password_change
 #: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
-msgid "Your password must be changed before accessing the system."
-msgstr "A sua palavra-passe deve ser alterada antes de aceder ao sistema."
+msgid "Force Password Change"
+msgstr "Alteração Obrigatória de Palavra-passe"
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "To guarantee account security, you must change your password before continuing."
+msgstr "Para garantir a segurança da sua conta, você deve alterar a sua palavra-passe antes de continuar."
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "Requirements:"
+msgstr "Requisitos:"
+
+#. module: dl_login_force_password_change
+#: model:ir.model.fields,field_description:dl_login_force_password_change.field_dl_change_password_wizard__password_current
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "Current Password"
+msgstr "Palavra-passe Atual"
+
+#. module: dl_login_force_password_change
+#: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
+msgid "Enter current password"
+msgstr "Digite a palavra-passe atual"
 
 #. module: dl_login_force_password_change
 #: model:ir.model.fields,field_description:dl_login_force_password_change.field_dl_change_password_wizard__password_new
@@ -76,8 +97,8 @@ msgstr "Confirmar Palavra-passe"
 
 #. module: dl_login_force_password_change
 #: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
-msgid "Repeat new password"
-msgstr "Repita a nova palavra-passe"
+msgid "Confirm new password"
+msgstr "Confirme a nova palavra-passe"
 
 #. module: dl_login_force_password_change
 #: model_terms:ir.ui.view,arch_db:dl_login_force_password_change.view_change_password_wizard
@@ -107,6 +128,18 @@ msgstr "Última alteração:"
 #. module: dl_login_force_password_change
 #: code:addons/dl_login_force_password_change/wizards/change_password_wizard.py:0
 #, python-format
+msgid "Current password is incorrect."
+msgstr "A palavra-passe atual está incorreta."
+
+#. module: dl_login_force_password_change
+#: code:addons/dl_login_force_password_change/wizards/change_password_wizard.py:0
+#, python-format
+msgid "The new password cannot be the same as the current password."
+msgstr "A nova palavra-passe não pode ser igual à atual."
+
+#. module: dl_login_force_password_change
+#: code:addons/dl_login_force_password_change/wizards/change_password_wizard.py:0
+#, python-format
 msgid "New passwords do not match."
 msgstr "As novas palavras-passe não coincidem."
 
@@ -115,6 +148,24 @@ msgstr "As novas palavras-passe não coincidem."
 #, python-format
 msgid "The password must be at least 8 characters long."
 msgstr "A palavra-passe deve ter pelo menos 8 caracteres."
+
+#. module: dl_login_force_password_change
+#: code:addons/dl_login_force_password_change/wizards/change_password_wizard.py:0
+#, python-format
+msgid "The password must contain at least one uppercase letter."
+msgstr "A palavra-passe deve conter pelo menos uma letra maiúscula."
+
+#. module: dl_login_force_password_change
+#: code:addons/dl_login_force_password_change/wizards/change_password_wizard.py:0
+#, python-format
+msgid "The password must contain at least one number or special character."
+msgstr "A palavra-passe deve conter pelo menos um número ou carácter especial."
+
+#. module: dl_login_force_password_change
+#: code:addons/dl_login_force_password_change/wizards/change_password_wizard.py:0
+#, python-format
+msgid "Security Notice"
+msgstr "Aviso de Segurança"
 
 #. module: dl_login_force_password_change
 #: code:addons/dl_login_force_password_change/models/ir_http.py:0
