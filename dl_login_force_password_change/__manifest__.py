@@ -1,7 +1,7 @@
 {
     "name": "DL Force Password Change on First Login",
     "summary": "Force users to change their password upon their first login or after 11 months.",
-    "version": "17.0.2.0.7",
+    "version": "17.0.2.0.8",
     "category": "Authentication",
     "website": "https://www.digitalub.ao",
     "author": "DIGITALUB ANGOLA, LDA",
@@ -47,7 +47,7 @@ How to use:
 2. Open a user profile.
 3. Check the "Force Password Change on Next Login" option (or click "Force Now").
 4. Newly created internal users are automatically prompted to set a new password on their first login.
-    """,    'name': 'Force Password Change on First Login',    'summary': 'Force users to change their password upon their first login or after configurable expiration policy',    'version': '17.0.2.0.7',    'price': 0.0,    'currency': 'EUR',    'images': ['static/description/banner.png'],
+    """,    'name': 'Force Password Change on First Login',    'summary': 'Force users to change their password upon their first login or after configurable expiration policy',    'version': '17.0.2.0.8',    'price': 0.0,    'currency': 'USD',    'images': ['static/description/banner.png'],
 
 
 
