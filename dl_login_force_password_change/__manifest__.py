@@ -12,7 +12,7 @@
     "currency": "USD",
     "depends": ["base", "web"],
     "data": [
-        "security/ir.model.access.csv",
+        "security/ir.access.csv",
         "data/ir_config_parameter.xml",
         "data/ir_cron.xml",
         "views/res_users_view.xml",
