@@ -1,7 +1,7 @@
 {
     "name": "Force Password Change on First Login",
     "summary": "Force users to change their password upon their first login or after configurable expiration policy",
-    "version": "17.0.2.0.9",
+    "version": "16.0.2.0.9",
     "category": "Authentication",
     "website": "https://www.digitalub.ao",
     "author": "DIGITALUB ANGOLA, LDA",

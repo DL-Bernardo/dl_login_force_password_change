@@ -17,10 +17,10 @@
                                 string="Force Now"
                                 type="object"
                                 class="oe_link"
-                                invisible="must_change_password"
+                                attrs="{'invisible': [('must_change_password', '=', True)]}"
                             />
                         </div>
-                        <div invisible="not password_last_changed" class="text-muted small mt-1">
+                        <div attrs="{'invisible': [('password_last_changed', '=', False)]}" class="text-muted small mt-1">
                             <span class="me-1">Last changed:</span>
                             <field name="password_last_changed" readonly="1" class="oe_inline"/>
                         </div>
