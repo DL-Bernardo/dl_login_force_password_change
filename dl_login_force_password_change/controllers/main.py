@@ -5,17 +5,19 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
 import re
-from odoo import http, fields, _
+from odoo import http, fields, release, _
 from odoo.http import request
 from odoo.addons.web.controllers.home import Home as WebHome
 
 
 class Home(WebHome):
-    @http.route("/web/login", type="http", auth="public")
+    @http.route()
     def web_login(self, redirect=None, **kw):
         response = super().web_login(redirect=redirect, **kw)
-        if request.session.uid and request.env.user.must_change_password and not request.env.user.share:
-            return request.redirect("/dl_force_password_change/change_password")
+        if request.session.uid:
+            user = request.env["res.users"].sudo().browse(request.session.uid)
+            if user.exists() and user.must_change_password and not user.share:
+                return request.redirect("/dl_force_password_change/change_password")
         return response
 
     @http.route("/dl_force_password_change/change_password", type="http", auth="user", methods=["GET", "POST"])
@@ -33,9 +35,12 @@ class Home(WebHome):
             password_confirm = kw.get("password_confirm")
 
             try:
-                # 1. Validate current password
+                # 1. Validate current password (compatible with Odoo 16/17 and 18/19/20)
                 try:
-                    user._check_credentials(password_current, {"interactive": True})
+                    if release.version_info[0] >= 18:
+                        user._check_credentials({"type": "password", "password": password_current}, {"interactive": True})
+                    else:
+                        user._check_credentials(password_current, {"interactive": True})
                 except Exception:
                     raise ValueError(_("Current password is incorrect."))
 

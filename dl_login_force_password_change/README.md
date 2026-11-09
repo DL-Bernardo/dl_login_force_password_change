@@ -1,8 +1,8 @@
-# DL Login Force Password Change
+# Force Password Change on First Login (`dl_login_force_password_change`)
 
 ## Description
-Boost the security of your Odoo 17.0 instance!  
-This module forces users to change their password at their **first login** or on next login when flagged by an administrator.  
+Boost the security of your Odoo instance!  
+This module forces users to change their password at their **first login**, on next login when flagged by an administrator, or periodically (default: 11 months).  
 Ideal for reinforcing corporate security governance and ensuring every user account maintains a private, compliant password.
 
 ## How it works
@@ -13,18 +13,22 @@ Ideal for reinforcing corporate security governance and ensuring every user acco
 
 ## Key Features
 - 🔒 **Enforce Password Change**: Force password renewal at first login or on demand.
-- 👥 **Universal Support**: Works seamlessly for both new and existing users.
+- 👥 **Universal Support**: Works seamlessly for both new and existing internal users.
 - ⚡ **Lightweight & Fast**: Zero external dependencies and clean integration.
 - 🛡️ **Audit Tracking**: Displays the date and time of the last password change.
-- 🖥️ **Responsive Wizard**: Sleek modal interface for updating credentials.
+- 🖥️ **Responsive Portal & Wizard**: Sleek glassmorphism portal and backend wizard for updating credentials.
 - 🎁 **100% Free Community Edition**: Maintained by Digitalub Angola.
 
-## Compatibility
-- Compatible with **Odoo 17.0** (Community & Enterprise).
+## Compatibility & Live Demos
+Compatible with **Odoo 16.0, 17.0, 18.0, 19.0 & 20.0** (Community & Enterprise):
+- **Odoo 16.0 Demo**: [https://demo16.invoiceone.ao](https://demo16.invoiceone.ao)
+- **Odoo 17.0 Demo**: [https://demo17.invoiceone.ao](https://demo17.invoiceone.ao)
+- **Odoo 18.0 Demo**: [https://demo18.invoiceone.ao](https://demo18.invoiceone.ao)
+- **Odoo 19.0 Demo**: [https://demo19.invoiceone.ao](https://demo19.invoiceone.ao)
+- **Odoo 20.0 Demo**: [https://demo20.invoiceone.ao](https://demo20.invoiceone.ao)
 
 ## Author & Support
 **DIGITALUB ANGOLA, LDA**  
 Website: [https://www.digitalub.ao](https://www.digitalub.ao)  
-Email: [geral@digitalub.ao](mailto:geral@digitalub.ao)  
-Demo: [https://demo.digitalub.ao](https://demo.digitalub.ao)
-
+Email: [suporte@digitalub.ao](mailto:suporte@digitalub.ao)  
+Demo (Odoo 17): [https://demo17.invoiceone.ao](https://demo17.invoiceone.ao)

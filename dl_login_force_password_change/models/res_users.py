@@ -4,7 +4,7 @@
 # Copyright 2024-2026 DIGITALUB ANGOLA, LDA
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
-from odoo import _, api, fields, models
+from odoo import api, fields, models
 from dateutil.relativedelta import relativedelta
 
 
@@ -45,10 +45,10 @@ class ResUsers(models.Model):
     @api.model
     def _cron_force_password_change(self):
         """Periodic cron to expire passwords based on configured months."""
+        icp = self.env["ir.config_parameter"].sudo()
+        get_fn = getattr(icp, "get_param", None) or getattr(icp, "get_str")
         expiration_months = int(
-            self.env["ir.config_parameter"]
-            .sudo()
-            .get_param("dl_force_password_change.expiration_months", 11)
+            get_fn("dl_force_password_change.expiration_months", 11) or 11
         )
         limit_date = fields.Datetime.now() - relativedelta(months=expiration_months)
         users_to_expire = self.search([

@@ -5,8 +5,7 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
 import re
-from odoo import _, api, fields, models
-from odoo.exceptions import UserError
+from odoo import _, fields, models, release
 
 
 class ChangePasswordWizard(models.TransientModel):
@@ -23,7 +22,10 @@ class ChangePasswordWizard(models.TransientModel):
 
         # 1. Validate current password
         try:
-            user._check_credentials(self.password_current, {"interactive": True})
+            if release.version_info[0] >= 18:
+                user._check_credentials({"type": "password", "password": self.password_current}, {"interactive": True})
+            else:
+                user._check_credentials(self.password_current, {"interactive": True})
         except Exception:
             return self._show_warning(_("Current password is incorrect."))
 

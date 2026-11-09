@@ -3,7 +3,7 @@
 # License LGPL-3.0 or later (https://www.gnu.org/licenses/lgpl).
 
 import logging
-from odoo import models, http, _
+from odoo import models, _
 from odoo.http import request
 from odoo.exceptions import AccessError
 
@@ -26,6 +26,8 @@ class IrHttp(models.AbstractModel):
                         "/web/login",
                         "/web/logout",
                         "/web/session/logout",
+                        "/license/expired",
+                        "/db_license_manage/status",
                     ]
 
                     is_allowed = any(path == p for p in allowed_paths) or \
@@ -35,7 +37,7 @@ class IrHttp(models.AbstractModel):
                                  path.startswith("/web/image/")
 
                     if not is_allowed:
-                        is_json = getattr(request, "dispatcher", None) and request.dispatcher.routing_type == "json"
+                        is_json = getattr(request, "dispatcher", None) and request.dispatcher.routing_type in ("json", "jsonrpc")
                         if is_json:
                             raise AccessError(_("You must change your password to continue."))
                         else:

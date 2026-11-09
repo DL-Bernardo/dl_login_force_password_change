@@ -1,13 +1,15 @@
 {
-    "name": "DL Force Password Change on First Login",
-    "summary": "Force users to change their password upon their first login or after 11 months.",
-    "version": "17.0.2.0.8",
+    "name": "Force Password Change on First Login",
+    "summary": "Force users to change their password upon their first login or after configurable expiration policy",
+    "version": "17.0.2.0.9",
     "category": "Authentication",
     "website": "https://www.digitalub.ao",
     "author": "DIGITALUB ANGOLA, LDA",
     "license": "LGPL-3",
     "application": False,
     "installable": True,
+    "price": 0.0,
+    "currency": "USD",
     "depends": ["base", "web"],
     "data": [
         "security/ir.model.access.csv",
@@ -27,8 +29,8 @@
         "static/description/screenshot6.png",
     ],
     "description": """
-DL Force Password Change on First Login
-=======================================
+Force Password Change on First Login
+====================================
 Advanced security module that enforces users to change their password when they log in for the first time, when flagged by an administrator, or periodically (default 11-month policy).
 
 Key Features:
@@ -39,19 +41,14 @@ Key Features:
 * Integrated Odoo backend wizard with current password verification.
 * Password complexity enforcement (minimum 8 characters, uppercase letter, number/symbol).
 * Tracks last password change timestamp.
-* 100% Free Community Edition by DIGITALUB ANGOLA.
+* 100% Free Community Edition by DIGITALUB ANGOLA (Odoo 16.0, 17.0, 18.0, 19.0 & 20.0).
 
-How to use:
+Live Demos:
 -----------
-1. Navigate to Settings > Users & Companies > Users.
-2. Open a user profile.
-3. Check the "Force Password Change on Next Login" option (or click "Force Now").
-4. Newly created internal users are automatically prompted to set a new password on their first login.
-    """,    'name': 'Force Password Change on First Login',    'summary': 'Force users to change their password upon their first login or after configurable expiration policy',    'version': '17.0.2.0.8',    'price': 0.0,    'currency': 'USD',    'images': ['static/description/banner.png'],
-
-
-
-
-
-
+* Odoo 16.0: https://demo16.invoiceone.ao
+* Odoo 17.0: https://demo17.invoiceone.ao
+* Odoo 18.0: https://demo18.invoiceone.ao
+* Odoo 19.0: https://demo19.invoiceone.ao
+* Odoo 20.0: https://demo20.invoiceone.ao
+    """,
 }
